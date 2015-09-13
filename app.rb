@@ -16,15 +16,6 @@ get '/' do
     erb :index
 end
 
-get '/write' do
-    station = Station.new
-    station.mem_id = "abcdefgh"
-    station.sf_station = "我孫子,柏"
-    station.in_station = "我孫子,北柏,柏"
-    station.save
-    "write success"
-end
-
 get '/input_main' do
    erb :input 
 end
