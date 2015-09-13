@@ -1,0 +1,21 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="/confirm_station" method="post" id="co_st" class="pull-left">
+            <label for="st0">開始駅</label>
+            <input type="text" name="st[]" id="st0" value="<%= $start_st %>">
+            <br />
+            <% while @num < @numst do %>
+            <% @num = @num + 1 %>
+            <label for="st<%= @num %>">駅<%= @num %></label>
+            <input type="text" name="st[]" id="st<%= @num %>">
+            <br />
+            <% end %>
+            <% @num = @num + 1 %>
+            <label for="st<%= @num %>">終了駅</label>
+            <input type="text" name="st[]" id="st<%= @num %>" value="<%= $finish_st %>"><br />
+            <input type="submit" value="登録！">
+        </form>
+    </body>
+</html>

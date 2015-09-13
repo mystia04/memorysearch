@@ -1,0 +1,22 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <form action="/input_station" method="post" id="in01" class="pull-left">
+            <label for="id_st">memory ID</label>
+            <input type="text" name="id_st" id="id_st" pattern="^[0-9A-Za-z]+$">
+            <br />
+            <label for="start_st">開始駅</label>
+            <input type="text" name="start_st" id="id_st">
+            <br />
+            <label for="finish_st">終了駅</label>
+            <input type="text" name="finish_st" id="finish_st">
+            <br />
+            <label for="number_st">駅数(開始、終了駅を含まない数)</label>
+            <input type="number" name="number_st" id="number_st">
+            <br />
+            <input type="submit" value="駅入力画面へ">
+        </form>
+    </body>
+</html>
