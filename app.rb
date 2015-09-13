@@ -48,6 +48,10 @@ end
 
 post '/confirm_station' do
     stations = params[:st]
+    checknull = stations.any?{|w| w.empty?}
+    if checknull == true then
+        redirect 'error'
+    end
     station_in = stations.join(",")
     station_sf = $start_st + "," + $finish_st
     station = Station.new
