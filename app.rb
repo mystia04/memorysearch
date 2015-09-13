@@ -80,9 +80,11 @@ get '/idError' do
 end
 
 get '/searchtest' do
-    src = params[:src]
-    likeword = "%" + src + "%"
-    @stations = Station.where("sf_station like ?", likeword)
+    first = params[:first]
+    last = params[:last]
+    st_first = first + "," + last
+    st_last = last + "," + first
+    @stations = Station.where("sf_station like ? or sf_station like ?", st_first, st_last)
     erb :index
 end
 
