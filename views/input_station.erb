@@ -3,19 +3,23 @@
     </head>
     <body>
         <form action="/confirm_station" method="post" id="co_st" class="pull-left">
-            <label for="st0">開始駅</label>
-            <input type="text" name="st[]" id="st0" value="<%= $start_st %>">
+            <label for="id_st">ID: <%= @id_st %></label>
+            <input type="hidden" name="id_st" value="<%= @id_st %>">
+            <br />
+            <label for="start_st">開始駅: <%= @start_st %></label>
+            <input type="hidden" name="start_st" value="<%= @start_st %>">
             <br />
             <% while @num < @numst do %>
             <% @num = @num + 1 %>
             <label for="st<%= @num %>">駅<%= @num %></label>
-            <input type="text" name="st[]" id="st<%= @num %>">
+            <input type="text" name="st[]" id="st<%= @num %>">駅
             <br />
             <% end %>
             <% @num = @num + 1 %>
-            <label for="st<%= @num %>">終了駅</label>
-            <input type="text" name="st[]" id="st<%= @num %>" value="<%= $finish_st %>"><br />
-            <input type="submit" value="登録！">
+            <label for="finish_st">終了駅: <%= @finish_st %></label>
+            <input type="hidden" name="finish_st" value="<%= @finish_st %>">
+            <br>
+            <input type="submit" value="確認画面へ">
         </form>
     </body>
 </html>

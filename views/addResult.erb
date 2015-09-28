@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <p>以下の内容を登録します。よろしいですか？</p>
+		<form action="/addFinish" method="post">
+		    ID: <%= @id_st %><br />
+		    <input type="hidden" name="id_st" value="<%= @id_st %>">
+		    開始駅: <%= @start_st %><br />
+		    <input type="hidden" name="start_st" value="<%= @start_st %>">
+		    終了駅: <%= @finish_st %><br />
+		    <input type="hidden" name="finish_st" value="<%= @finish_st %>">
+		    登録駅: <%= @station_in %><br />
+		    <input type="hidden" name="station_in" value="<%= @station_in %>">
+		    <input type="submit" value="登録！">
+		</form>
+    </body>
+</html>
